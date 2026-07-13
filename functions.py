@@ -11,9 +11,11 @@ def crosses_fun(stock_choice):
     last_200 = df["ma200"].iloc[-1]
 
     if last_50 > last_200:
-        return "buy"
+        return "gold"
+    elif last_200 > last_50:
+        return "dead"
     else:
-        return "sell"
+        print("waow")
 
 
 

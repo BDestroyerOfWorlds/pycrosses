@@ -4,16 +4,27 @@ stocks_list = []
 golden_list = []
 dead_list = []
 
-number_of_stocks = int(input("number of tickers: "))
+def ticker_number():
+    while True:
+        try:
+            return int(input("number of tickers: "))
+        except ValueError:
+            print("please insert a positive integer")
 
-for i in range(number_of_stocks):
-    stocks_list.append(input("tickers:"))
+
+
+
+for i in range(ticker_number()):
+    stocks_list.append(str(input("tickers:")))
+
+
+
 
 for ticker in stocks_list:
 
-    if crosses_fun(ticker) == "sell":
+    if crosses_fun(ticker) == "dead":
         dead_list.append(ticker)
-    elif crosses_fun(ticker) == "buy":
+    elif crosses_fun(ticker) == "gold":
         golden_list.append(ticker)
     else :
         pass
