@@ -1,4 +1,4 @@
-#this will be so ass
+#turned out okay
 import main
 import sys
 from PySide6 import QtWidgets, QtGui, QtCore
@@ -55,7 +55,7 @@ app.exec()
 
 
 
-#this shit doesnt even run yet dont even bother with it
+#gui actually runs now but the function is shit so it barely works
 
 
 
