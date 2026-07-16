@@ -1,5 +1,5 @@
 from functions import crosses_fun
-from validticker import is_tradable
+from validticker import is_tradeable
 
 stocks_list = []
 golden_list = []
@@ -20,14 +20,19 @@ def ticker_number():
 for i in range(ticker_number()):
     stocks_list.append(str(input("tickers:")))
 
+
+#########################################
+
 for ticker in stocks_list:
-    if is_tradable(ticker):
+    if is_tradeable(ticker):
         pass
     else:
         print("test")
 
-
-
+"""
+turns out its not even my fault its just that yahoo api is shit
+"""
+#########################################
 
 
 

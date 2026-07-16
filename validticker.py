@@ -1,11 +1,11 @@
 import yfinance as yf
-from yfinance import ticker
 
 
-def is_tradable(ticker):
-    checked_ticker = yf.Ticker(ticker)
-    checked_info = checked_ticker.info
+def is_tradeable(spam):
 
-    return checked_info.get("tradeable") or checked_info.get("cryptoTradeable")
+    spam_ticker = yf.Ticker(spam)
+    spam_ticker_info = spam_ticker.info
+    print(spam_ticker_info)
 
-print(is_tradable(ticker))
+    return spam_ticker_info.get("hasPrePostMarketData")
+
