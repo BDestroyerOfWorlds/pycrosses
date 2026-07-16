@@ -1,3 +1,5 @@
+from selectors import SelectSelector
+
 from functions import crosses_fun
 from validticker import is_tradeable
 
@@ -18,24 +20,13 @@ def ticker_number():
             print("please insert a positive integer")
 
 for i in range(ticker_number()):
-    stocks_list.append(str(input("tickers:")))
-
-
-#########################################
-
-for ticker in stocks_list:
-    if is_tradeable(ticker):
-        pass
+    ticker_for_trial = str(input("tickers:"))
+    if is_tradeable(ticker_for_trial):
+        stocks_list.append(ticker_for_trial)
     else:
-        print("test")
+        print(f"{ticker_for_trial} is invalid or delisted")
 
-"""
-turns out its not even my fault its just that yahoo api is shit
-"""
-#########################################
-
-
-
+#need to make up my mind about what im gonna do from this point
 
 for ticker in stocks_list:
 
