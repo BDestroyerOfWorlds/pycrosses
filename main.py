@@ -7,12 +7,14 @@ dead_list = []
 def ticker_number():
     while True:
         try:
-            return int(input("number of tickers: "))
+            ticker_amount = int(input("number of tickers: "))
+            if ticker_amount <= 0:
+                raise ValueError
+            else:
+                return ticker_amount
+
         except ValueError:
             print("please insert a positive integer")
-
-
-
 
 for i in range(ticker_number()):
     stocks_list.append(str(input("tickers:")))
