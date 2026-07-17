@@ -1,5 +1,6 @@
 from functions import crosses_fun
 from validticker import is_tradeable
+import time
 
 stocks_set = set()
 golden_set = set()
@@ -27,14 +28,27 @@ for i in range(ticker_number()):
 
 #adding block
 
-for ticker in stocks_set:
+while True:
+    try:
+        for ticker in stocks_set:
+            if crosses_fun(ticker) == "dead":
+                dead_set.add(ticker)
+            elif crosses_fun(ticker) == "gold":
+                golden_set.add(ticker)
+            else:
+                pass
 
-    if crosses_fun(ticker) == "dead":
-        dead_set.add(ticker)
-    elif crosses_fun(ticker) == "gold":
-        golden_set.add(ticker)
-    else:
-        pass
+            print("dead list")
+            print(dead_set)
+            print("golden list")
+            print(golden_set)
+
+            time.sleep(86400)
+    except:
+
+        print("error")
+
+        continue
 
 print("dead list")
 print(dead_set)
