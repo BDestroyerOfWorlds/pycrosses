@@ -1,4 +1,5 @@
 #turned out okay
+
 import main
 import sys
 from PySide6 import QtWidgets, QtGui, QtCore
