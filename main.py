@@ -47,10 +47,3 @@ while True:
     except:
 
         print("error")
-
-        continue
-
-print("dead list")
-print(dead_set)
-print("golden list")
-print(golden_set)
