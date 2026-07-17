@@ -4,8 +4,8 @@ import sys
 from PySide6 import QtWidgets, QtGui, QtCore
 from PySide6.QtCore import Qt
 
-from main import dead_list
-from main import golden_list
+from main import dead_set
+from main import golden_set
 
 class MainWindow(QtWidgets.QDialog):
     def __init__(self):
@@ -31,10 +31,10 @@ class MainWindow(QtWidgets.QDialog):
         main_layout.addWidget(sized_header("Dead"))
         main_layout.addWidget(self.dead_list_widget)
 
-        for ticker in golden_list:
+        for ticker in golden_set:
             self.add_golden_ticker(ticker)
 
-        for ticker in dead_list:
+        for ticker in dead_set:
             self.add_dead_ticker(ticker)
 
     def add_golden_ticker(self, ticker):
