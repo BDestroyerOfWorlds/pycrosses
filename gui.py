@@ -13,7 +13,7 @@ class MainWindow(QtWidgets.QDialog):
 
         main_layout = QtWidgets.QVBoxLayout(self)
 
-        def sized_header(text, size=18, colour=None):
+        def sized_header(text, size=18):
             lbl = QtWidgets.QLabel(text)
             font = lbl.font()
             font.setPointSize(size)

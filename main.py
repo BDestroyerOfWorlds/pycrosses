@@ -28,22 +28,18 @@ for i in range(ticker_number()):
 
 #adding block
 
-while True:
-    try:
-        for ticker in stocks_set:
-            if crosses_fun(ticker) == "dead":
-                dead_set.add(ticker)
-            elif crosses_fun(ticker) == "gold":
-                golden_set.add(ticker)
-            else:
-                pass
 
-            print("dead list")
-            print(dead_set)
-            print("golden list")
-            print(golden_set)
+for ticker in stocks_set:
+    if crosses_fun(ticker) == "dead":
+        dead_set.add(ticker)
+    elif crosses_fun(ticker) == "gold":
+        golden_set.add(ticker)
+    else:
+        pass
 
-            time.sleep(86400)
-    except:
+print("dead list")
+print(dead_set)
+print("golden list")
+print(golden_set)
 
-        print("error")
+
